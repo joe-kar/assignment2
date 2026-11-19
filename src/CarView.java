@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 
 public class CarView extends JFrame {
     public static final int X = 800;
-    public static final int Y = 800;
+    public static final int Y = 600;
 
     // The controller member
     CarController carC;
@@ -97,6 +97,10 @@ public class CarView extends JFrame {
         // TODO: Create more for each component as necessary
         gasButton.addActionListener(e -> {
             carC.gas(gasAmount);
+        });
+
+        brakeButton.addActionListener(e -> {
+            carC.brake(gasAmount);
         });
 
         // Make the panel layout more compact
