@@ -18,7 +18,7 @@ public class CarController {
 
     // The frame that represents this instance View of the MVC pattern
     CarView frame;
-    // TODO A list of cars, modify if needed
+    // DONE A list of cars, modify if needed
     ArrayList<Car> cars = new ArrayList<>();
 
     public void startTimer() {
@@ -26,7 +26,7 @@ public class CarController {
     }
 
     /* Each step, the TimerListener moves all cars in the list and tells the
-     * view to update its images. TODO Change this method to your needs.
+     * view to update its images. DONE Change this method to your needs.
      */
     private class TimerListener implements ActionListener {
         public void actionPerformed(ActionEvent e) { 
@@ -53,6 +53,30 @@ public class CarController {
         double brake = ((double) amount) / 100;
         for (Car car : cars) {
             car.brake(brake);
+        }
+    }
+
+    void turnLeft() {
+        for (Car car : cars) {
+            car.turnLeft();
+        }
+    }
+
+    void turnRight() {
+        for (Car car : cars) {
+            car.turnRight();
+        }
+    }
+
+    void startEngines() {
+        for (Car car : cars) {
+            car.startEngine();
+        }
+    }
+
+    void stopEngines() {
+        for (Car car : cars) {
+            car.stopEngine();
         }
     }
 }

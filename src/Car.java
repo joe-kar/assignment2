@@ -59,14 +59,14 @@ public class Car implements Movable{
         }
     }
 
-    // TODO fix this method according to lab pm
+    // DONE fix this method according to lab pm
     public void gas(double amount) {
         if (amount >= 0 && amount <= 1) {
             incrementSpeed(amount);
         }
     }
 
-    // TODO fix this method according to lab pm
+    // DONE fix this method according to lab pm
     public void brake(double amount) {
         if (amount >= 0 && amount <= 1) {
             decrementSpeed(amount);
@@ -81,11 +81,11 @@ public class Car implements Movable{
         if (direction == 0) {
             x += currentSpeed;
         } else if (direction == 1) {
-            y += currentSpeed;
+            y -= currentSpeed;
         } else if (direction == 2) {
             x -= currentSpeed;
         } else if (direction == 3) {
-            y -= currentSpeed;
+            y += currentSpeed;
         }
     }
 

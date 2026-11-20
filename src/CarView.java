@@ -46,7 +46,7 @@ public class CarView extends JFrame {
     }
 
     // Sets everything in place and fits everything
-    // TODO: Take a good look and make sure you understand (roughly) how these methods and components work
+    // DONE: Take a good look and make sure you understand (roughly) how these methods and components work
     private void initComponents(String title) {
         this.setTitle(title);
         this.setPreferredSize(new Dimension(X,Y));
@@ -101,6 +101,22 @@ public class CarView extends JFrame {
 
         brakeButton.addActionListener(e -> {
             carC.brake(gasAmount);
+        });
+
+        leftButton.addActionListener(e -> {
+            carC.turnLeft();
+        });
+
+        rightButton.addActionListener(e -> {
+            carC.turnRight();
+        });
+
+        startButton.addActionListener(e -> {
+            carC.startEngines();
+        });
+
+        stopButton.addActionListener(e -> {
+            carC.stopEngines();
         });
 
         // Make the panel layout more compact
