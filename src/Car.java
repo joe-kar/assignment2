@@ -18,6 +18,10 @@ public class Car implements Movable{
         stopEngine();
     }
 
+    public String getModelName() {
+        return modelName;
+    }
+
     public int getNrDoors() {
         return nrDoors;
     }
@@ -101,5 +105,10 @@ public class Car implements Movable{
 
     public double[] getCoords() {
         return new double[]{x, y};
+    }
+
+    public void setCoords(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 }
