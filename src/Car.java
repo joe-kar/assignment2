@@ -111,4 +111,9 @@ public class Car implements Movable{
         this.x = x;
         this.y = y;
     }
+
+    public String getDirection() {
+        String[] directions_stringified = {"r", "u", "l", "d"};
+        return directions_stringified[direction];
+    }
 }

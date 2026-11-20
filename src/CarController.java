@@ -35,6 +35,27 @@ public class CarController {
                 car.move();
                 int x = (int) Math.round(car.getCoords()[0]);
                 int y = (int) Math.round(car.getCoords()[1]);
+
+                if (car.getDirection().equals("r") && car.getCoords()[0] >= 700) {
+                    car.turnLeft();
+                    car.turnLeft();
+                }
+
+                if (car.getDirection().equals("u") && car.getCoords()[1] <= 0) {
+                    car.turnLeft();
+                    car.turnLeft();
+                }
+
+                if (car.getDirection().equals("l") && car.getCoords()[0] <= 0) {
+                    car.turnLeft();
+                    car.turnLeft();
+                }
+
+                if (car.getDirection().equals("d") && car.getCoords()[1] >= 300) {
+                    car.turnLeft();
+                    car.turnLeft();
+                }
+
                 String cartype = car.getModelName();
                 frame.drawPanel.moveit(x, y, cartype, count);
                 // repaint() calls the paintComponent method of the panel
