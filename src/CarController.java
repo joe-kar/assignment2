@@ -103,4 +103,22 @@ public class CarController {
             car.stopEngine();
         }
     }
+
+    void turboOn() {
+        for (Car car : cars) {
+            if (car.getModelName().equals("Saab95")) {
+                Saab95 temp = (Saab95) car;
+                temp.setTurboOn();
+            }
+        }
+    }
+
+    void turboOff() {
+        for (Car car : cars) {
+            if (car.getModelName().equals("Saab95")) {
+                Saab95 temp = (Saab95) car;
+                temp.setTurboOff();
+            }
+        }
+    }
 }

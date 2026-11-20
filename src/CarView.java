@@ -94,7 +94,7 @@ public class CarView extends JFrame {
         this.add(stopButton);
 
         // This actionListener is for the gas button only
-        // TODO: Create more for each component as necessary
+        // Done: Create more for each component as necessary
         gasButton.addActionListener(e -> {
             carC.gas(gasAmount);
         });
@@ -117,6 +117,14 @@ public class CarView extends JFrame {
 
         stopButton.addActionListener(e -> {
             carC.stopEngines();
+        });
+
+        turboOnButton.addActionListener(e -> {
+            carC.turboOn();
+        });
+
+        turboOffButton.addActionListener(e -> {
+            carC.turboOff();
         });
 
         // Make the panel layout more compact
